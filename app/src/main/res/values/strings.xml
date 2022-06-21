@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CapstoneProject2</string>
+
+    //IDs
+    <string name="web_client_id">1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com</string>
+
+
 </resources>
