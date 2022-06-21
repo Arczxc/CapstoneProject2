@@ -24,7 +24,7 @@ object Constants {
 
     //Screens
     const val AUTH_SCREEN = "Authentication"
-    const val PROFILE_SCREEN = "Profile"
+    const val MAIN_SCREEN = "MainScreen"
 
     //Messages
     const val SIGN_IN_ERROR_MESSAGE = "16: Cannot find a matching credential."

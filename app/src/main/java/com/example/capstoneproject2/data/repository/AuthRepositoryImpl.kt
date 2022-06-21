@@ -26,13 +26,13 @@ import javax.inject.Singleton
 
 @Singleton
 class AuthRepositoryImpl  @Inject constructor(
-    private val auth: FirebaseAuth,
     private var oneTapClient: SignInClient,
     @Named(SIGN_IN_REQUEST)
     private var signInRequest: BeginSignInRequest,
     @Named(SIGN_UP_REQUEST)
     private var signUpRequest: BeginSignInRequest,
     private var signInClient: GoogleSignInClient,
+    private val auth: FirebaseAuth,
     private val usersRef: CollectionReference
 ) : AuthRepository {
     override fun isUserAuthenticatedInFirebase() = auth.currentUser != null

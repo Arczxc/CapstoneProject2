@@ -7,43 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1018155983959:android:83d44e4ad2be882e27af12",
-        "android_client_info": {
-          "package_name": "com.example.capstone2"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1018155983959-l0ltv6g5m5l0c7hnt0jn2nf8b8u9vt6d.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.capstone2",
-            "certificate_hash": "6158ab0f290a956071b2544dd66730194e073cc0"
-          }
-        },
-        {
-          "client_id": "1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBS28Gusipi0ykOaMz4qvznGCcRvtIIO4A"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:1018155983959:android:558d781f08cf5e4527af12",
         "android_client_info": {
           "package_name": "com.example.capstoneproject"
@@ -81,57 +44,12 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1018155983959:android:63d66409eceff44e27af12",
+        "mobilesdk_app_id": "1:1018155983959:android:e9f8bccbea929db227af12",
         "android_client_info": {
           "package_name": "com.example.capstoneproject2"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "1018155983959-7bsb5noj8p86hqg6qdp46hfirmraoqa7.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.capstoneproject2",
-            "certificate_hash": "6158ab0f290a956071b2544dd66730194e073cc0"
-          }
-        },
-        {
-          "client_id": "1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBS28Gusipi0ykOaMz4qvznGCcRvtIIO4A"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1018155983959:android:8cbe6da76c0a486027af12",
-        "android_client_info": {
-          "package_name": "com.example.casptoneproject2"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1018155983959-tqj448jks4265cgpel3ep08v0bn41dmp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.casptoneproject2",
-            "certificate_hash": "6158ab0f290a956071b2544dd66730194e073cc0"
-          }
-        },
         {
           "client_id": "1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com",
           "client_type": 3

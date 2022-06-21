@@ -4,6 +4,8 @@ import android.app.Application
 import android.content.Context
 import com.example.capstoneproject2.R
 import com.example.capstoneproject2.core.Constants
+import com.example.capstoneproject2.core.Constants.SIGN_IN_REQUEST
+import com.example.capstoneproject2.core.Constants.SIGN_UP_REQUEST
 import com.example.capstoneproject2.data.repository.AuthRepositoryImpl
 import com.example.capstoneproject2.domain.repository.AuthRepository
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
@@ -22,9 +24,11 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Named
 
 @Module
+@ExperimentalCoroutinesApi
 @InstallIn(SingletonComponent::class)
 class AppModule {
     @Provides
@@ -94,20 +98,20 @@ class AppModule {
 
     @Provides
     fun provideAuthRepository(
-        auth: FirebaseAuth,
         oneTapClient: SignInClient,
-        @Named(Constants.SIGN_IN_REQUEST)
+        @Named(SIGN_IN_REQUEST)
         signInRequest: BeginSignInRequest,
-        @Named(Constants.SIGN_UP_REQUEST)
+        @Named(SIGN_UP_REQUEST)
         signUpRequest: BeginSignInRequest,
         signInClient: GoogleSignInClient,
+        auth: FirebaseAuth,
         usersRef: CollectionReference
     ): AuthRepository = AuthRepositoryImpl(
-        auth = auth,
         oneTapClient = oneTapClient,
         signInRequest = signInRequest,
         signUpRequest = signUpRequest,
         signInClient = signInClient,
+        auth = auth,
         usersRef = usersRef
     )
 }
