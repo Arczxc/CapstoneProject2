@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.capstoneproject2.presentation.navigation.Screen
 import com.example.capstoneproject2.presentation.screens.MainScreen.components.BottomBarScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.CartScreen.CartScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.HomeScreen.HomeScreen
@@ -26,7 +27,9 @@ fun BottomNavGraph (navController: NavHostController){
             CartScreen()
         }
         composable(route = BottomBarScreen.Profile.route){
-            ProfileScreen()
+            ProfileScreen(
+              
+            )
         }
     }
 }
