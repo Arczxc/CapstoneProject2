@@ -22,7 +22,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.capstoneproject2.presentation.screens.MainScreen.components.BottomBarScreen
-import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.BottomNavGraph
+import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.HomeNavGraph
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -69,7 +69,7 @@ fun MainScreen(){
             }
         },
         content = {
-            BottomNavGraph(navController = navController)
+            HomeNavGraph(navController = navController)
         },
         floatingActionButton = {
             FloatingActionButton(

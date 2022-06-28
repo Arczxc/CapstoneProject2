@@ -5,11 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.capstoneproject2.presentation.navigation.Screen.MainScreen
 import com.example.capstoneproject2.presentation.screens.AuthenticationScreen.LoginScreen.LoginScreenViewModel
-import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.Graph
+import com.example.capstoneproject2.presentation.screens.MainScreen.MainScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.RootNavGraph
 import com.example.capstoneproject2.presentation.theme.CapstoneProject2Theme
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,16 +32,17 @@ class MainActivity : ComponentActivity() {
 
                 //    }
                 // }
-                RootNavGraph(navController = navController)
+                RootNavGraph(navController = rememberNavController())
 
                 checkAuthStatus()
                 getAuthState()
             }
         }
     }
+    @Composable
         private fun checkAuthStatus() {
             if (viewModel.isUserAuthenticated) {
-                navController.navigate(Graph.HOME)
+                MainScreen()
             }
         }
 
