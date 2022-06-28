@@ -9,6 +9,8 @@ import com.example.capstoneproject2.presentation.navigation.Screen.AuthScreen
 import com.example.capstoneproject2.presentation.navigation.Screen.MainScreen
 import com.example.capstoneproject2.presentation.screens.AuthenticationScreen.LoginScreen.LoginScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.MainScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.components.BottomBarScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.screen.ProfileScreen.ProfileScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 
@@ -35,12 +37,7 @@ fun NavGraph(
         composable(
             route = Screen.MainScreen.route
         ) {
-            MainScreen(
-                navigateToAuthScreen = {
-                    navController.popBackStack()
-                    navController.navigate(AuthScreen.route)
-                }
-            )
+            MainScreen()
         }
     }
 }

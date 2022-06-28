@@ -26,7 +26,7 @@ import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.B
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MainScreen(navigateToAuthScreen: () -> Unit){
+fun MainScreen(){
 
     val bottomBarState = rememberSaveable { (mutableStateOf(true)) }
     val navController = rememberNavController()

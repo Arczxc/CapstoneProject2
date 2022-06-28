@@ -27,9 +27,7 @@ fun BottomNavGraph (navController: NavHostController){
             CartScreen()
         }
         composable(route = BottomBarScreen.Profile.route){
-            ProfileScreen(
-              
-            )
+            ProfileScreen()
         }
     }
 }
