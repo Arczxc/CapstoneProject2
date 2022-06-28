@@ -11,10 +11,11 @@ import com.example.capstoneproject2.presentation.screens.MainScreen.screen.Profi
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.TicketScreen.TicketScreen
 
 @Composable
-fun BottomNavGraph (navController: NavHostController){
+fun HomeNavGraph (navController: NavHostController){
     NavHost(
-        navController = navController ,
-        startDestination =BottomBarScreen.Home.route
+        navController = navController,
+        route =Graph.HOME,
+        startDestination = BottomBarScreen.Home.route
     ){
         composable(route = BottomBarScreen.Home.route){
             HomeScreen()
