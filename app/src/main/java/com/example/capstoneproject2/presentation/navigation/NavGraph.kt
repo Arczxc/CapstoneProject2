@@ -9,8 +9,10 @@ import com.example.capstoneproject2.presentation.navigation.Screen.AuthScreen
 import com.example.capstoneproject2.presentation.navigation.Screen.MainScreen
 import com.example.capstoneproject2.presentation.screens.AuthenticationScreen.LoginScreen.LoginScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.MainScreen
-import com.example.capstoneproject2.presentation.screens.MainScreen.components.BottomBarScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.screen.CartScreen.CartScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.screen.HomeScreen.HomeScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.ProfileScreen.ProfileScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.screen.TicketScreen.TicketScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 
@@ -40,5 +42,25 @@ fun NavGraph(
             MainScreen()
         }
 
+        composable(
+            route = BottomBarScreen.Home.route
+        ){
+            HomeScreen()
+        }
+        composable(
+            route = BottomBarScreen.Home.route
+        ){
+            TicketScreen()
+        }
+        composable(
+            route = BottomBarScreen.Home.route
+        ){
+            CartScreen()
+        }
+        composable(
+            route = BottomBarScreen.Home.route
+        ){
+            ProfileScreen()
+        }
     }
 }

@@ -1,4 +1,8 @@
 package com.example.capstoneproject2.presentation.screens.MainScreen.screen.TicketScreen
 
-class TicketScreen() {
+import androidx.compose.runtime.Composable
+
+@Composable
+fun TicketScreen(){
+
 }
