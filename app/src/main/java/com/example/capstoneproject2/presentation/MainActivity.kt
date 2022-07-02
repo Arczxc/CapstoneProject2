@@ -8,9 +8,9 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.capstoneproject2.presentation.navigation.RootNavGraph
 import com.example.capstoneproject2.presentation.screens.AuthenticationScreen.LoginScreen.LoginScreenViewModel
 import com.example.capstoneproject2.presentation.screens.MainScreen.MainScreen
-import com.example.capstoneproject2.presentation.screens.MainScreen.navigation.RootNavGraph
 import com.example.capstoneproject2.presentation.theme.CapstoneProject2Theme
 import dagger.hilt.android.AndroidEntryPoint
 

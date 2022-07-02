@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.capstoneproject2.presentation.screens.MainScreen.components.BottomBarScreen
+import com.example.capstoneproject2.presentation.navigation.BottomBarScreen
+import com.example.capstoneproject2.presentation.navigation.Graph
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.CartScreen.CartScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.HomeScreen.HomeScreen
 import com.example.capstoneproject2.presentation.screens.MainScreen.screen.ProfileScreen.ProfileScreen
@@ -14,7 +15,7 @@ import com.example.capstoneproject2.presentation.screens.MainScreen.screen.Ticke
 fun HomeNavGraph (navController: NavHostController){
     NavHost(
         navController = navController,
-        route =Graph.HOME,
+        route = Graph.HOME,
         startDestination = BottomBarScreen.Home.route
     ){
         composable(route = BottomBarScreen.Home.route){
@@ -27,7 +28,12 @@ fun HomeNavGraph (navController: NavHostController){
             CartScreen()
         }
         composable(route = BottomBarScreen.Profile.route){
-            ProfileScreen()
+            ProfileScreen(
+                navigateToAuthScreen = {
+                    navController.popBackStack()
+                    navController.navigate(Graph.HOME)
+                }
+            )
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.capstoneproject2.presentation.screens.MainScreen.navigation
+package com.example.capstoneproject2.presentation.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
