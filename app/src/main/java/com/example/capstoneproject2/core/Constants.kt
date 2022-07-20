@@ -22,6 +22,11 @@ object Constants {
     const val SIGN_OUT = "Sign-out"
     const val REVOKE_ACCESS = "Revoke Access"
 
+    //Firestore
+    const val PRODUCTS = "product"
+    const val NAME = "name"
+    const val PAGE_SIZE = 10L
+
     //Screens
     const val AUTH_SCREEN = "Authentication"
     const val MAIN_SCREEN = "MainScreen"

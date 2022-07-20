@@ -57,6 +57,8 @@ dependencies {
     implementation "androidx.core:core-ktx:$core_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$live_data_version"
+    implementation "androidx.activity:activity-compose:$activity_compose_version"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
     //Material
     implementation "com.google.android.material:material:$material_version"
     //Compose
@@ -76,10 +78,17 @@ dependencies {
     //Play Services
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$play_services_version"
     implementation "com.google.android.gms:play-services-auth:$play_services_auth_version"
+
     //Accompanist
     implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
+
     //Coil
     implementation "io.coil-kt:coil-compose:$coil_compose_version"
+
+    //Paging
+    implementation "androidx.paging:paging-compose:$paging_compose_version"
+    //GSON
+    implementation "com.google.code.gson:gson:$gson_version"
 
 
 
