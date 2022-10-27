@@ -34,7 +34,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @ExperimentalPagingApi
 @ExperimentalCoroutinesApi
 fun ProductCard (
-    navController: NavController,
+    onItemClick: () -> Unit,
     viewModel: HomeScreenViewModel = hiltViewModel()
 ){
     val products = viewModel.products.collectAsLazyPagingItems()
@@ -45,7 +45,7 @@ fun ProductCard (
                 ProductItem(
                     product,
                     onItemClick = {
-
+                        onItemClick ()
                     }
                 )
             }
@@ -67,7 +67,7 @@ fun ProductItem(
             .background(Color.Gray, shape = RoundedCornerShape(24.dp))
             //.border(BorderStroke(2.dp, Color.Black))
             .height(200.dp)
-            .clickable(onClick = onItemClick),
+            .clickable { onItemClick() },
         contentAlignment = Alignment.Center
     ) {
 
@@ -127,7 +127,7 @@ fun ProductItem(
                 ) {
                     product.price?.let{
                         Text(
-                            text = it.toString(),
+                            text = "₱ " + it.toString(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp
                         )

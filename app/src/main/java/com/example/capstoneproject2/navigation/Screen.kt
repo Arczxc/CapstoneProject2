@@ -65,3 +65,16 @@ sealed class HomeScreen(
     )
 
 }
+
+sealed class DetailsScreen(val route: String) {
+    object Information : DetailsScreen(route = "INFORMATION")
+    object Overview : DetailsScreen(route = "OVERVIEW")
+}
+
+sealed class TicketScreens(val route:String){
+    object ContactUs: TicketScreens(route = "CONTACTUS")
+}
+
+sealed class Cart(val route: String){
+    object Gcash: Cart(route = "GCASH")
+}

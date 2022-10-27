@@ -17,7 +17,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @ExperimentalPagingApi
 @ExperimentalCoroutinesApi
 fun HomeScreen(
-    navController: NavHostController,
+    onClick: () -> Unit,
 ){
     Box(modifier = Modifier.fillMaxSize())
     {
@@ -34,7 +34,7 @@ fun HomeScreen(
             SearchSection()
             Spacer(modifier = Modifier.height(16.dp))
             CategoryTab()
-            ProductCard(navController)
+            ProductCard(onClick)
         }
     }
 }

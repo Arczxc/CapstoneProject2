@@ -1,60 +1,29 @@
 package com.example.capstoneproject2.presentation.MainScreen.presentation.screen.CartScreen
 
-import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
-import androidx.compose.material.Scaffold
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Paid
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
-
-import android.view.ViewGroup
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material.*
-import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
 @Composable
-fun CartScreen(){
-
-
-    MainContent()
-
-}
-
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
-@Composable
-fun MainContent() {
-    Scaffold(
-        topBar = { TopAppBar(title = { Text("TRACK YOUR ORDER HERE", color = Color.White) }, backgroundColor = Color(0xff0f9d58)) },
-        content = { MyContent() }
-    )
-}
-
-// Creating a composable
-// function to create WebView
-// Calling this function as
-// content in the above function
-@Composable
-fun MyContent(){
-
-    // Declare a string that contains a url
-    val mUrl = "https://www.ninjavan.co/en-ph/tracking"
-
-    // Adding a WebView inside AndroidView
-    // with layout as full screen
-    AndroidView(factory = {
-        WebView(it).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT
-            )
-            webViewClient = WebViewClient()
-            loadUrl(mUrl)
+fun CartScreen(onClick: () -> Unit,) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Button(onClick = { onClick() }) {
+                Icon(
+                    Icons.Filled.Paid,
+                    contentDescription = "description",
+                    modifier = Modifier.size(ButtonDefaults.IconSize)
+                )
+                Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                Text("Check Out")
+            }
         }
-    }, update = {
-        it.loadUrl(mUrl)
-    })
+    }
 }
