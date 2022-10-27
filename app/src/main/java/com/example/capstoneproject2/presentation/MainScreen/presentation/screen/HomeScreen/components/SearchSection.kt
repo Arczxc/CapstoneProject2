@@ -19,7 +19,6 @@ fun SearchSection() {
     var searchText = remember {
         mutableStateOf("")
     }
-
     OutlinedTextField(
         value = searchText.value,
         onValueChange = {

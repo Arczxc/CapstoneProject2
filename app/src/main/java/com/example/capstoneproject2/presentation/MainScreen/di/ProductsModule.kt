@@ -4,8 +4,6 @@ import androidx.paging.PagingConfig
 import com.example.capstoneproject2.presentation.MainScreen.data.repository.FirestorePagingSource
 import com.example.capstoneproject2.presentation.MainScreen.data.repository.ProductsRepositoryImpl
 import com.example.capstoneproject2.presentation.MainScreen.domain.repository.ProductsRepository
-import com.example.capstoneproject2.presentation.MainScreen.domain.use_cases_product.GetProduct
-import com.example.capstoneproject2.presentation.MainScreen.domain.use_cases_product.UseCasesProduct
 import com.example.capstoneproject2.core.Constants.NAME
 import com.example.capstoneproject2.core.Constants.PAGE_SIZE
 import com.example.capstoneproject2.core.Constants.PRODUCTS
@@ -44,8 +42,4 @@ object ProductsModule {
         config: PagingConfig
     ): ProductsRepository = ProductsRepositoryImpl(source, config)
 
-    @Provides
-    fun provideUseCases(repository: ProductsRepository) = UseCasesProduct(
-        getProducts = GetProduct(repository)
-    )
 }

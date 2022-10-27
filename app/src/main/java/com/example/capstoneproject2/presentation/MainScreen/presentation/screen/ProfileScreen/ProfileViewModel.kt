@@ -21,9 +21,9 @@ class ProfileViewModel @Inject constructor(
     private val _revokeAccessState = mutableStateOf<Response<Boolean>>(Success(false))
     val revokeAccessState: State<Response<Boolean>> = _revokeAccessState
 
-    val displayName get() = repo.getDisplayName()
+    val displayName get() = repo.getDisplayName()       // Get Display Name
 
-    val photoUrl get() = repo.getPhotoUrl()
+    val photoUrl get() = repo.getPhotoUrl()             // Get Photo URL
 
     fun signOut() {
         viewModelScope.launch {

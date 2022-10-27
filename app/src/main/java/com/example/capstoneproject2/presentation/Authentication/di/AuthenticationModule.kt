@@ -44,7 +44,7 @@ class AuthenticationModule {
     @Provides
     fun provideUsersRef(
         db: FirebaseFirestore
-    ) = db.collection(Constants.USERS_REF)
+    ) = db.collection(Constants.USERS_REF)      // USERS COLLECTION IN FIRESTORE
 
     @Provides
     fun provideOneTapClient(
@@ -103,14 +103,14 @@ class AuthenticationModule {
         @Named(Constants.SIGN_UP_REQUEST)
         signUpRequest: BeginSignInRequest,
         signInClient: GoogleSignInClient,
-        auth: FirebaseAuth,
+        auth: FirebaseAuth,                                   //The entry point of the Firebase Authentication SDK
         usersRef: CollectionReference
     ): AuthRepository = AuthRepositoryImpl(
         oneTapClient = oneTapClient,
         signInRequest = signInRequest,
         signUpRequest = signUpRequest,
         signInClient = signInClient,
-        auth = auth,
+        auth = auth,                                          //The entry point of the Firebase Authentication SDK
         usersRef = usersRef
     )
 }

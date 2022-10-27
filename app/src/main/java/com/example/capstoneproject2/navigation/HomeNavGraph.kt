@@ -1,12 +1,16 @@
 package com.example.capstoneproject2.presentation.screens.MainScreen.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navigation
 import androidx.paging.ExperimentalPagingApi
 import com.example.capstoneproject2.navigation.BottomBarScreen
 import com.example.capstoneproject2.navigation.Graph
+import com.example.capstoneproject2.navigation.authNavGraph
 import com.example.capstoneproject2.presentation.MainScreen.presentation.screen.CartScreen.CartScreen
 import com.example.capstoneproject2.presentation.MainScreen.presentation.screen.HomeScreen.HomeScreen
 import com.example.capstoneproject2.presentation.MainScreen.presentation.screen.ProfileScreen.ProfileScreen
@@ -45,4 +49,6 @@ fun HomeNavGraph (navController: NavHostController){
         }
     }
 }
+
+
 

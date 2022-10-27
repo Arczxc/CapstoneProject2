@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.paging.ExperimentalPagingApi
 import com.example.capstoneproject2.presentation.MainScreen.presentation.screen.HomeScreen.HomeScreen
+import com.example.capstoneproject2.presentation.screens.MainScreen.MainScreen
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 
@@ -21,7 +22,7 @@ fun RootNavGraph(navController: NavHostController){
     ){
         authNavGraph(navController = navController)
         composable(route = Graph.HOME) {
-            HomeScreen(navController = navController)
+            MainScreen()
         }
     }
 }

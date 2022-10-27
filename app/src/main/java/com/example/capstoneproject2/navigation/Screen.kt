@@ -15,6 +15,12 @@ sealed class Screen(val route: String) {
     object MainScreen: Screen(MAIN_SCREEN)
 }
 
+sealed class AuthScreen(val route: String) {
+    object Login : AuthScreen(route = "LOGIN")
+    object SignUp : AuthScreen(route = "SIGN_UP")
+    object Forgot : AuthScreen(route = "FORGOT")
+}
+
 sealed class BottomBarScreen(
     val route: String,
     val title: String,
@@ -42,6 +48,20 @@ sealed class BottomBarScreen(
         route = "profile",
         title = "Profile",
         icon = Icons.Default.Person,
+    )
+
+}
+
+sealed class HomeScreen(
+    val route: String,
+){
+
+    object Search: HomeScreen(
+        route = "search"
+    )
+
+    object Details: HomeScreen(
+        route = "details"
     )
 
 }

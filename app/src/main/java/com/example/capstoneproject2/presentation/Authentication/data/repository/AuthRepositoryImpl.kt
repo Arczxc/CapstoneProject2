@@ -32,7 +32,7 @@ class AuthRepositoryImpl  @Inject constructor(
     @Named(SIGN_UP_REQUEST)
     private var signUpRequest: BeginSignInRequest,
     private var signInClient: GoogleSignInClient,
-    private val auth: FirebaseAuth,
+    private val auth: FirebaseAuth,                         //The entry point of the Firebase Authentication SDK
     private val usersRef: CollectionReference
 ) : AuthRepository {
     override fun isUserAuthenticatedInFirebase() = auth.currentUser != null

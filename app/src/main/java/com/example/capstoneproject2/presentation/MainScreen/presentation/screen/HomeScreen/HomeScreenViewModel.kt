@@ -4,15 +4,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.cachedIn
-import com.example.capstoneproject2.presentation.MainScreen.domain.use_cases_product.UseCasesProduct
+import com.example.capstoneproject2.presentation.MainScreen.domain.repository.ProductsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 @ExperimentalPagingApi
 class HomeScreenViewModel @Inject constructor(
-    useCases: UseCasesProduct
+    private val repo: ProductsRepository
 ): ViewModel() {
-    val products = useCases.getProducts().cachedIn(viewModelScope)
-
+    val products = repo.getProducts().cachedIn(viewModelScope)
 }

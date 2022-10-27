@@ -37,7 +37,6 @@ class MainActivity : ComponentActivity() {
                 //    }
                 // }
                 RootNavGraph(navController = rememberNavController())
-
                 checkAuthStatus()
                 getAuthState()
             }
