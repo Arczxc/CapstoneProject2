@@ -5,9 +5,9 @@ import com.google.android.gms.auth.api.identity.BeginSignInResult
 import com.google.firebase.auth.AuthCredential
 import kotlinx.coroutines.flow.Flow
 
-interface AuthRepository {
+interface AuthRepository {                                                       //Abstracting the functionality and implementation details of the actual repository
     fun isUserAuthenticatedInFirebase(): Boolean
-
+                                                                                 // suspend func can be suspended and can start somewhere else in an application
     suspend fun oneTapSignInWithGoogle(): Flow<Response<BeginSignInResult>>
 
     suspend fun oneTapSignUpWithGoogle(): Flow<Response<BeginSignInResult>>

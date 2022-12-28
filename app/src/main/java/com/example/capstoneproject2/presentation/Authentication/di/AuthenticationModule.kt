@@ -28,7 +28,7 @@ import javax.inject.Named
 @Module
 @ExperimentalCoroutinesApi
 @InstallIn(SingletonComponent::class)
-class AuthenticationModule {
+class AuthenticationModule {                       //Modules are kind of containers for specific types of dependencies
 
     @Provides
     fun provideContext(
@@ -36,10 +36,10 @@ class AuthenticationModule {
     ): Context = app.applicationContext
 
     @Provides
-    fun provideFirebaseAuth() = Firebase.auth
+    fun provideFirebaseAuth() = Firebase.auth      //Firebase authentication instance
 
     @Provides
-    fun provideFirebaseFirestore() = Firebase.firestore
+    fun provideFirebaseFirestore() = Firebase.firestore      // Firebase database instance
 
     @Provides
     fun provideUsersRef(
@@ -105,7 +105,7 @@ class AuthenticationModule {
         signInClient: GoogleSignInClient,
         auth: FirebaseAuth,                                   //The entry point of the Firebase Authentication SDK
         usersRef: CollectionReference
-    ): AuthRepository = AuthRepositoryImpl(
+    ): AuthRepository = AuthRepositoryImpl(                 // Will return AuhtRepository Implementation
         oneTapClient = oneTapClient,
         signInRequest = signInRequest,
         signUpRequest = signUpRequest,

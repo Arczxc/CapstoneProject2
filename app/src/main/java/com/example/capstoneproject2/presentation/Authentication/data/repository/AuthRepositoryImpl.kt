@@ -25,7 +25,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-class AuthRepositoryImpl  @Inject constructor(
+class AuthRepositoryImpl  @Inject constructor(               //This class will implement our AuthRepository interface and will use override to a function
     private var oneTapClient: SignInClient,
     @Named(SIGN_IN_REQUEST)
     private var signInRequest: BeginSignInRequest,
